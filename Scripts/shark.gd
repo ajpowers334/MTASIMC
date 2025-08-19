@@ -81,7 +81,7 @@ func _physics_process(delta):
 		_last_debug_print = current_time
 
 	# Handle eating state as the first logic branch
-	if _handle_eating_state(delta):
+	if await _handle_eating_state(delta):
 		move_and_slide()
 		return
 
@@ -169,7 +169,7 @@ func _calculate_detection_range():
 			effective_detection_range += 400.0
 			detection_debug_state = 1
 	if detection_debug_state != last_detection_range_debug:
-		_debug_print("Detection range changed: %s" % str(effective_detection_range), True)
+		_debug_print("Detection range changed: %s" % str(effective_detection_range), true)
 		last_detection_range_debug = detection_debug_state
 	return effective_detection_range
 
