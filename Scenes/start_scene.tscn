@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://3g1kevsrw27i"]
+
+[ext_resource type="Script" uid="uid://835qp8uddt5v" path="res://Scripts/start_scene.gd" id="1_82sop"]
+[ext_resource type="Texture2D" uid="uid://bcadgyydy2cpl" path="res://Sprites/WallPapers/titlescreen.png" id="2_aeweq"]
+
+[node name="StartScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_82sop")
+
+[node name="TitleScreen" type="Sprite2D" parent="."]
+position = Vector2(600, 300)
+scale = Vector2(0.75, 0.825)
+texture = ExtResource("2_aeweq")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -50.0
+offset_right = 200.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 72
+text = "MOM, There's A Shark In My Closet!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="StartButton" type="Button" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "START"

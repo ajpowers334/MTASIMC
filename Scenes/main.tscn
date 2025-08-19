@@ -1,0 +1,115 @@
+[gd_scene load_steps=12 format=3 uid="uid://dae5txr1v3srp"]
+
+[ext_resource type="Texture2D" uid="uid://c7wdt3d62kq5u" path="res://icon.svg" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://dwcyctqnxxuwh" path="res://Scenes/player.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://qqe14h86rnp4" path="res://Scenes/paper_bag.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://npuw751pc0hm" path="res://Scenes/shark.tscn" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://dgfnov7isa5od" path="res://Scenes/desk.tscn" id="5_kry3j"]
+[ext_resource type="PackedScene" uid="uid://fbxcsbl7o5im" path="res://Scenes/bed.tscn" id="6_21xkr"]
+[ext_resource type="PackedScene" uid="uid://ce7bwgcmy7bfe" path="res://Scenes/hiding_spot.tscn" id="7_6bp64"]
+[ext_resource type="PackedScene" uid="uid://blu06vdor6svn" path="res://Scenes/npc.tscn" id="8_344ge"]
+[ext_resource type="PackedScene" uid="uid://bba62cwh5gb5m" path="res://Scenes/teddy_bear.tscn" id="9_ynf5e"]
+[ext_resource type="PackedScene" uid="uid://cwu7dc44soh6b" path="res://Scenes/stairs.tscn" id="10_hptm8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bo1nx"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Shark" parent="." instance=ExtResource("4_jjvhh")]
+position = Vector2(2033, 789)
+
+[node name="NPC" parent="." instance=ExtResource("8_344ge")]
+position = Vector2(504, 879)
+
+[node name="Teddy Bear" parent="." instance=ExtResource("9_ynf5e")]
+position = Vector2(1188, 317)
+
+[node name="Paper Bag" parent="." instance=ExtResource("3_8gbba")]
+position = Vector2(890, 320)
+
+[node name="Player" parent="." instance=ExtResource("2_bo1nx")]
+position = Vector2(481, 262)
+
+[node name="Platform" type="StaticBody2D" parent="."]
+position = Vector2(547, 452)
+scale = Vector2(6, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_bo1nx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform"]
+texture = ExtResource("1_jjgbg")
+
+[node name="Platform2" type="StaticBody2D" parent="."]
+position = Vector2(1267, 452)
+scale = Vector2(6, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_bo1nx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform2"]
+texture = ExtResource("1_jjgbg")
+
+[node name="Platform3" type="StaticBody2D" parent="."]
+position = Vector2(654, 1024)
+scale = Vector2(30, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_bo1nx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform3"]
+texture = ExtResource("1_jjgbg")
+
+[node name="Platform4" type="StaticBody2D" parent="."]
+position = Vector2(2190, 653)
+scale = Vector2(1, 6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_bo1nx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform4"]
+texture = ExtResource("1_jjgbg")
+
+[node name="Platform5" type="StaticBody2D" parent="."]
+position = Vector2(-340, 452)
+scale = Vector2(6, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform5"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_bo1nx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform5"]
+texture = ExtResource("1_jjgbg")
+
+[node name="Platform6" type="StaticBody2D" parent="."]
+position = Vector2(-1142, 585)
+scale = Vector2(1, 6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform6"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_bo1nx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform6"]
+texture = ExtResource("1_jjgbg")
+
+[node name="Desk" parent="." instance=ExtResource("5_kry3j")]
+position = Vector2(-166, 884)
+
+[node name="Bed" parent="." instance=ExtResource("6_21xkr")]
+position = Vector2(-336, 320)
+
+[node name="HidingSpot" parent="." instance=ExtResource("7_6bp64")]
+position = Vector2(1457, 200)
+
+[node name="Stairs" parent="." instance=ExtResource("10_hptm8")]
+position = Vector2(100, 640)
+
+[node name="Stairs2" parent="." instance=ExtResource("10_hptm8")]
+position = Vector2(1723, 650)
+
+[node name="Stairs3" parent="." instance=ExtResource("10_hptm8")]
+position = Vector2(-779, 617)

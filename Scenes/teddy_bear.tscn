@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bba62cwh5gb5m"]
+
+[ext_resource type="Script" uid="uid://dy1eno8m10hk4" path="res://Scripts/teddy_bear.gd" id="1_f8etk"]
+[ext_resource type="Texture2D" uid="uid://c7wdt3d62kq5u" path="res://icon.svg" id="2_qbaau"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ebohy"]
+
+[node name="Teddy Bear" type="Area2D" groups=["pickup_item"]]
+script = ExtResource("1_f8etk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_qbaau")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(12, 6)
+shape = SubResource("RectangleShape2D_ebohy")

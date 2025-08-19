@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://blu06vdor6svn"]
+
+[ext_resource type="Texture2D" uid="uid://c7wdt3d62kq5u" path="res://icon.svg" id="1_acqhf"]
+[ext_resource type="Script" uid="uid://ie0gxv33bfql" path="res://Scripts/npc.gd" id="1_xxsvc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xxsvc"]
+
+[node name="NPC" type="CharacterBody2D" groups=["pausable"]]
+script = ExtResource("1_xxsvc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_xxsvc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_acqhf")

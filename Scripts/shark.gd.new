@@ -1,0 +1,18 @@
+extends CharacterBody2D
+
+# [Previous code remains the same until line 284]
+
+func _on_player_lost():
+	# Called when player goes out of detection range or hides
+	print("[SHARK] Player lost, switching to patrol mode")
+	is_in_patrol_mode = true
+	is_patrolling = false  # This will trigger a new patrol cycle
+	
+	# Generate a new random direction for patrol
+	_generate_new_random_direction()
+	
+	# Debug info
+	var player_status = "hidden" if player and player.is_in_group("hidden") else "out of range"
+	print("[SHARK] Player %s, starting patrol at position: %s" % [player_status, global_position])
+
+# [Rest of the file remains the same]

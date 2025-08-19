@@ -1,0 +1,183 @@
+[gd_scene load_steps=13 format=3 uid="uid://dkd4f585larj0"]
+
+[ext_resource type="Texture2D" uid="uid://c7wdt3d62kq5u" path="res://icon.svg" id="1_k5f4k"]
+[ext_resource type="Script" uid="uid://bbyl803uhcm6c" path="res://Scripts/level.gd" id="1_qxfql"]
+[ext_resource type="PackedScene" uid="uid://cwu7dc44soh6b" path="res://Scenes/stairs.tscn" id="2_6phgx"]
+[ext_resource type="PackedScene" uid="uid://fbxcsbl7o5im" path="res://Scenes/bed.tscn" id="3_8c0lf"]
+[ext_resource type="PackedScene" uid="uid://ce7bwgcmy7bfe" path="res://Scenes/hiding_spot.tscn" id="4_754fn"]
+[ext_resource type="PackedScene" uid="uid://dgfnov7isa5od" path="res://Scenes/desk.tscn" id="5_bvt00"]
+[ext_resource type="PackedScene" uid="uid://qqe14h86rnp4" path="res://Scenes/paper_bag.tscn" id="6_oqgf2"]
+[ext_resource type="PackedScene" uid="uid://bba62cwh5gb5m" path="res://Scenes/teddy_bear.tscn" id="7_qxfql"]
+[ext_resource type="PackedScene" uid="uid://dwcyctqnxxuwh" path="res://Scenes/player.tscn" id="8_oqgf2"]
+[ext_resource type="PackedScene" uid="uid://npuw751pc0hm" path="res://Scenes/shark.tscn" id="9_qxfql"]
+[ext_resource type="PackedScene" uid="uid://blu06vdor6svn" path="res://Scenes/npc.tscn" id="10_ha31o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81xng"]
+
+[node name="Level" type="Node2D" groups=["level"]]
+script = ExtResource("1_qxfql")
+
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="Platform" type="StaticBody2D" parent="Platforms"]
+position = Vector2(550, 450)
+scale = Vector2(8, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_81xng")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform"]
+texture = ExtResource("1_k5f4k")
+
+[node name="Platform2" type="StaticBody2D" parent="Platforms"]
+position = Vector2(1700, 450)
+scale = Vector2(8, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform2"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_81xng")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform2"]
+texture = ExtResource("1_k5f4k")
+
+[node name="Platform3" type="StaticBody2D" parent="Platforms"]
+position = Vector2(-470, 1050)
+scale = Vector2(8, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform3"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_81xng")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform3"]
+texture = ExtResource("1_k5f4k")
+
+[node name="Platform4" type="StaticBody2D" parent="Platforms"]
+position = Vector2(2250, 800)
+scale = Vector2(1, 15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform4"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_81xng")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform4"]
+texture = ExtResource("1_k5f4k")
+
+[node name="Platform5" type="StaticBody2D" parent="Platforms"]
+position = Vector2(-600, 450)
+scale = Vector2(8, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform5"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_81xng")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform5"]
+texture = ExtResource("1_k5f4k")
+
+[node name="Platform6" type="StaticBody2D" parent="Platforms"]
+position = Vector2(-1142, 800)
+scale = Vector2(1, 15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform6"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_81xng")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform6"]
+texture = ExtResource("1_k5f4k")
+
+[node name="Platform7" type="StaticBody2D" parent="Platforms"]
+position = Vector2(550, 1050)
+scale = Vector2(8, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform7"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_81xng")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform7"]
+texture = ExtResource("1_k5f4k")
+
+[node name="Platform8" type="StaticBody2D" parent="Platforms"]
+position = Vector2(1700, 1050)
+scale = Vector2(8, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform8"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_81xng")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform8"]
+texture = ExtResource("1_k5f4k")
+
+[node name="Platform9" type="StaticBody2D" parent="Platforms"]
+position = Vector2(-600, 1650)
+scale = Vector2(8, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform9"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_81xng")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform9"]
+texture = ExtResource("1_k5f4k")
+
+[node name="Platform10" type="StaticBody2D" parent="Platforms"]
+position = Vector2(550, 1650)
+scale = Vector2(10, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform10"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_81xng")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform10"]
+texture = ExtResource("1_k5f4k")
+
+[node name="Platform11" type="StaticBody2D" parent="Platforms"]
+position = Vector2(1700, 1650)
+scale = Vector2(8, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform11"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_81xng")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform11"]
+texture = ExtResource("1_k5f4k")
+
+[node name="Stairs" parent="." instance=ExtResource("2_6phgx")]
+position = Vector2(-22, 700)
+
+[node name="Stairs2" parent="." instance=ExtResource("2_6phgx")]
+position = Vector2(1128, 700)
+
+[node name="Stairs3" parent="." instance=ExtResource("2_6phgx")]
+position = Vector2(1128, 1300)
+
+[node name="Stairs4" parent="." instance=ExtResource("2_6phgx")]
+position = Vector2(-1012, 1282)
+
+[node name="Bed" parent="." instance=ExtResource("3_8c0lf")]
+position = Vector2(-767, 315)
+
+[node name="HidingSpot" parent="." instance=ExtResource("4_754fn")]
+position = Vector2(-248, 195)
+
+[node name="Desk" parent="." instance=ExtResource("5_bvt00")]
+position = Vector2(1692, 320)
+
+[node name="HidingSpot2" parent="." instance=ExtResource("4_754fn")]
+position = Vector2(557, 805)
+
+[node name="HidingSpot3" parent="." instance=ExtResource("4_754fn")]
+position = Vector2(1558, 1405)
+
+[node name="Paper Bag" parent="." instance=ExtResource("6_oqgf2")]
+position = Vector2(1975, 1519)
+
+[node name="Teddy Bear" parent="." instance=ExtResource("7_qxfql")]
+position = Vector2(1989, 920)
+
+[node name="Player" parent="." instance=ExtResource("8_oqgf2")]
+position = Vector2(-410, 320)
+
+[node name="Shark" parent="." instance=ExtResource("9_qxfql")]
+position = Vector2(1764, 1427)
+
+[node name="NPC" parent="." instance=ExtResource("10_ha31o")]
+position = Vector2(-539, 922)

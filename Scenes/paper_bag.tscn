@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://qqe14h86rnp4"]
+
+[ext_resource type="Script" uid="uid://dxn3xhlq5hv7s" path="res://Scripts/paper_bag.gd" id="1_dqd1q"]
+[ext_resource type="Texture2D" uid="uid://c7wdt3d62kq5u" path="res://icon.svg" id="1_ebohy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ebohy"]
+
+[node name="Paper Bag" type="Area2D" groups=["pickup_item"]]
+script = ExtResource("1_dqd1q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ebohy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(12, 6)
+shape = SubResource("RectangleShape2D_ebohy")

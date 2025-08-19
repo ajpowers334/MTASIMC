@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://npuw751pc0hm"]
+
+[ext_resource type="Texture2D" uid="uid://c7wdt3d62kq5u" path="res://icon.svg" id="1_03h2o"]
+[ext_resource type="Script" uid="uid://cexhcf3yim8ec" path="res://Scripts/shark.gd" id="1_87kak"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_87kak"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cb72u"]
+
+[node name="Shark" type="CharacterBody2D" groups=["pausable"]]
+scale = Vector2(1, 2.5)
+collision_mask = 3
+script = ExtResource("1_87kak")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_87kak")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_03h2o")
+
+[node name="EatArea" type="Area2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EatArea"]
+scale = Vector2(10, 7)
+shape = SubResource("RectangleShape2D_cb72u")

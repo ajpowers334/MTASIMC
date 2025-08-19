@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://fbxcsbl7o5im"]
+
+[ext_resource type="Script" uid="uid://c353trqelle4v" path="res://Scripts/bed.gd" id="1_8uqln"]
+[ext_resource type="Texture2D" uid="uid://c7wdt3d62kq5u" path="res://icon.svg" id="1_yfxyx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8uqln"]
+
+[node name="Bed" type="Area2D" groups=["bed"]]
+scale = Vector2(3, 1)
+script = ExtResource("1_8uqln")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(10, 6)
+shape = SubResource("RectangleShape2D_8uqln")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yfxyx")
